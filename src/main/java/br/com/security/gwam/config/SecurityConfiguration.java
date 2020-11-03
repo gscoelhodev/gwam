@@ -16,10 +16,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-            .anyRequest().fullyAuthenticated()
+        //Oauth2 Authentication
+        http
+            .antMatcher("/**")
+            .authorizeRequests()
+            .antMatchers("/")
+            .permitAll()
+            .anyRequest()
+            .authenticated()
             .and()
-            .formLogin();
+            .oauth2Login(); //-- Use it for Google login integrated with Spring Security
     }
 
     @Override
