@@ -29,10 +29,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             //.authenticated() // Use it for Google login integrated with Spring Security
             .and()
             .oauth2Login() // Use it for Google login integrated with Spring Security
-            .and().formLogin() // Use it for LDAP login integrated with Spring Security
-            .and()
-            .sessionManagement()
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .and().formLogin(); // Use it for LDAP login integrated with Spring Security
+            //.and()
+            //.sessionManagement()
+            //.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
