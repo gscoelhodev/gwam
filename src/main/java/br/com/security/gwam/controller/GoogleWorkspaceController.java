@@ -10,7 +10,7 @@ public class GoogleWorkspaceController {
 
     @GetMapping("load")
     public String load(){
-        return "LDAP authentication fine loaded";
+        return "Logged on LDAP and authentication fine loaded";
     }
 
     @GetMapping("authRequired")

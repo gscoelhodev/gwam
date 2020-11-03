@@ -46,6 +46,17 @@ userPassword: {SHA}nFCebWjxfaLbHHG1Qk5UU4trbvQ=
 #user - ben
 #userPassword - benspassword
 
+#ADICIONEI
+dn: uid=meu.email@gmail.com,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Nome Sobrenome
+sn: Sobrenome
+uid: meu.email@gmail.com
+userPassword: senha do email
+
 dn: uid=bob,ou=people,dc=springframework,dc=org
 objectclass: top
 objectclass: person

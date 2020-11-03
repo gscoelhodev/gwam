@@ -2,10 +2,12 @@ package br.com.security.gwam.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.LdapShaPasswordEncoder;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 import java.util.Arrays;
@@ -16,16 +18,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //Oauth2 Authentication
+        //Oauth2 and LDAP Authentication
         http
             .antMatcher("/**")
             .authorizeRequests()
             .antMatchers("/")
             .permitAll()
             .anyRequest()
-            .authenticated()
+            .fullyAuthenticated() // Use it for LDAP login integrated with Spring Security
+            //.authenticated() // Use it for Google login integrated with Spring Security
             .and()
-            .oauth2Login(); //-- Use it for Google login integrated with Spring Security
+            .oauth2Login() // Use it for Google login integrated with Spring Security
+            .and().formLogin() // Use it for LDAP login integrated with Spring Security
+            .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
