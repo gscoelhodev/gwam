@@ -1,6 +1,0 @@
-br/com/security/gwam/controller/CustomerController.class
-br/com/security/gwam/config/SecurityConfiguration.class
-br/com/security/gwam/controller/GoogleWorkspaceController.class
-br/com/security/gwam/model/Customer.class
-br/com/security/gwam/GwamApplication.class
-br/com/security/gwam/repository/CustomerRepository.class
