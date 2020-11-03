@@ -12,4 +12,5 @@ public class GoogleWorkspaceController {
     public String load(){
         return "LDAP Authentication fine loaded";
     }
+
 }

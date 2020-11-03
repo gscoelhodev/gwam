@@ -1,3 +1,6 @@
+/home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/controller/CustomerController.java
 /home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/GwamApplication.java
 /home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/config/SecurityConfiguration.java
+/home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/model/Customer.java
+/home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/repository/CustomerRepository.java
 /home/gustavo/Desktop/FCamara/Intelipost/workspaces/gwam/src/main/java/br/com/security/gwam/controller/GoogleWorkspaceController.java
