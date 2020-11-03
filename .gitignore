@@ -1,5 +1,9 @@
 HELP.md
 target/
+target/gwam-0.0.1-SNAPSHOT.jar
+target/gwam-0.0.1-SNAPSHOT.jar.original
+target/surefire-reports/TEST-br.com.security.gwam.GwamApplicationTests.xml
+target/surefire-reports/br.com.security.gwam.GwamApplicationTests.txt
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
